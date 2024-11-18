@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+html{
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Geist Mono, 'Times New Roman', Times, serif;
+  }
+  h2 {
+    --a: -45deg; /* control the angle */
+    --t: .23em; /* thickness of the underline */ 
+    color: #F1D4AF;
+  }
+  
+  h2 span {
+    --_s: calc(var(--t)*cos(var(--a)));
+    background:
+      linear-gradient(var(--a),#0000 var(--_s),currentColor 0 calc(100% - var(--_s)),#0000 0) 
+      bottom/var(--i,90%) var(--t) no-repeat;
+    padding: 0 .25em calc(var(--t) + .1em);
+    -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+    transition: .3s;
+    cursor: pointer;
+  }
+  h2:hover span {
+    --i: 100%;
+  }
+  
+  h2 {
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: capitalize;
+  }
+  h4{
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 1.33rem;
+    margin-bottom: 1.33rem;
+    color: #da9203;
+    letter-spacing: .02em;
+    text-transform: capitalize;
+  }
+  body{
+    background-image: linear-gradient(to right, rgb(116, 229, 159) , rgb(100, 192, 223));
+      padding-top: 50px;
+      padding-right: 30px;
+      padding-bottom: 0px;
+      padding-left: 80px;
+  }
+  .flexcentre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .image::-webkit-scrollbar{
+    display: none;
+  }
+  .image{
+    display: block;
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+  .footer {
+    position: absolute;
+    right: 0;
+    bottom: 100;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+  }
+  .image{
+      padding-top: 5px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      padding-left: 5px;
+  }
+  .heading {
+    font-size: 55px;
+  }
+  #icon{
+    font-size:20px;
+  }
+  
+  .geist-mono{
+    font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+  }
